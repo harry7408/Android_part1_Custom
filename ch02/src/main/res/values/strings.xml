@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">fastcampus_android_part1</string>
+    <string name="init_text">초기화</string>
+    <string name="plus_text">+</string>
+    <string name="initial_count">0</string>
+</resources>
