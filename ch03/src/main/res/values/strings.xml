@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ch03</string>
+    <string name="meter_unit">m</string>
+    <string name="cm_unit">cm</string>
+
+    <string name="editText_hint_message">자연수를 입력해주세요</string>
+    <string name="value_zero">0</string>
+
+    <string name="savedInstanceState">onSavedInstance Called</string>
+    <string name="restoreInstanceState">onRestoreInstance Called</string>
+</resources>
