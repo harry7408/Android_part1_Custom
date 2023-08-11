@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <androidx.constraintlayout.widget.Guideline
+       android:id="@+id/maxGuideline"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       app:layout_constraintGuide_percent="0.35" />
+
+   <TextView
+       android:id="@+id/nameGuideTextView"
+       style="@style/guideLine_text_style"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_margin="24dp"
+       android:text="@string/name_guideLine_text"
+       app:layout_constraintEnd_toStartOf="@+id/maxGuideline"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <TextView
+       android:id="@+id/nameTextView"
+       app:layout_constraintStart_toStartOf="@id/maxGuideline"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="@id/nameGuideTextView"
+       app:layout_constraintBottom_toBottomOf="@id/nameGuideTextView"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:gravity="end"
+       android:layout_margin="36dp"
+       style="@style/content_text_style"
+       tools:text="name"/>
+
+   <TextView
+       android:id="@+id/birthGuideTextView"
+       style="@style/guideLine_text_style"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_margin="24dp"
+       android:text="@string/birth_guideLine_text"
+       app:layout_constraintEnd_toStartOf="@+id/maxGuideline"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/nameGuideTextView" />
+
+   <TextView
+       android:id="@+id/birthTextView"
+       app:layout_constraintStart_toStartOf="@id/maxGuideline"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="@id/birthGuideTextView"
+       app:layout_constraintBottom_toBottomOf="@id/birthGuideTextView"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:gravity="end"
+       android:layout_margin="36dp"
+       style="@style/content_text_style"
+       tools:text="1970-01-01"/>
+
+   <TextView
+       android:id="@+id/bloodTypeGuideTextView"
+       style="@style/guideLine_text_style"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_margin="24dp"
+       android:text="@string/bloodType_guideLine_text"
+       app:layout_constraintEnd_toStartOf="@+id/maxGuideline"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/birthGuideTextView" />
+
+   <TextView
+       android:id="@+id/bloodTextView"
+       app:layout_constraintStart_toStartOf="@id/maxGuideline"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="@id/bloodTypeGuideTextView"
+       app:layout_constraintBottom_toBottomOf="@id/bloodTypeGuideTextView"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:gravity="end"
+       android:layout_margin="36dp"
+       style="@style/content_text_style"
+       tools:text="+A"/>
+
+   <TextView
+       android:id="@+id/telGuideTextView"
+       style="@style/guideLine_text_style"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_margin="24dp"
+       android:text="@string/tel_guideLine_text"
+       app:layout_constraintEnd_toStartOf="@+id/maxGuideline"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/bloodTypeGuideTextView" />
+
+   <TextView
+       android:id="@+id/telTextView"
+       style="@style/content_text_style"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_margin="36dp"
+       android:gravity="end"
+       app:layout_constraintBottom_toBottomOf="@id/telGuideTextView"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="@id/maxGuideline"
+       app:layout_constraintTop_toTopOf="@id/telGuideTextView"
+       tools:text="010-xxxx-xxxx" />
+
+   <TextView
+       android:id="@+id/detailGuideTextView"
+       style="@style/guideLine_text_style"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_margin="24dp"
+       android:text="@string/detail_guideLine_text"
+       app:layout_constraintEnd_toStartOf="@+id/maxGuideline"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/telGuideTextView" />
+
+   <TextView
+       android:id="@+id/TextView"
+       style="@style/content_text_style"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_margin="36dp"
+       android:gravity="end"
+       app:layout_constraintBottom_toBottomOf="@id/detailGuideTextView"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="@id/maxGuideline"
+       app:layout_constraintTop_toTopOf="@id/detailGuideTextView"
+       tools:text="주의사항" />
+
+   <com.google.android.material.floatingactionbutton.FloatingActionButton
+       android:id="@+id/teleButton"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       app:layout_constraintStart_toStartOf="@id/editButton"
+       app:layout_constraintEnd_toEndOf="@id/editButton"
+       app:layout_constraintBottom_toTopOf="@id/editButton"
+       android:layout_marginBottom="36dp"
+       tools:layout_editor_absoluteY="483dp"
+       android:src="@drawable/ic_baseline_phone_24"
+       android:backgroundTint="@color/actionBar_color"
+       android:contentDescription="@string/call_button_contentDescription" />
+
+   <com.google.android.material.floatingactionbutton.FloatingActionButton
+       android:id="@+id/editButton"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="@+id/maxGuideline"
+       app:layout_constraintHorizontal_bias="0.8"
+       android:layout_marginBottom="48dp"
+       android:src="@drawable/ic_baseline_edit_24"
+       android:backgroundTint="@color/top_color"
+       android:contentDescription="@string/edit_button_contentDescription"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
