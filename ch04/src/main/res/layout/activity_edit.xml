@@ -6,4 +6,186 @@
     android:layout_height="match_parent"
     tools:context=".EditActivity">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/maxGuideline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <TextView
+        android:id="@+id/nameGuideTextView"
+        style="@style/guideLine_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="@string/name_guideLine_text"
+        app:layout_constraintEnd_toStartOf="@+id/maxGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nameInputEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="36dp"
+        android:gravity="center"
+        android:hint="@string/name_edit_text_hint"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@id/nameGuideTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/maxGuideline"
+        app:layout_constraintTop_toTopOf="@id/nameGuideTextView"
+        tools:ignore="Autofill" />
+
+
+    <TextView
+        android:id="@+id/birthGuideTextView"
+        style="@style/guideLine_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="@string/birth_guideLine_text"
+        app:layout_constraintEnd_toStartOf="@+id/maxGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameGuideTextView" />
+
+    <TextView
+        android:id="@+id/birthPickTextView"
+        style="@style/content_text_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:gravity="end"
+        android:text="@string/initial_birth_text"
+        app:layout_constraintBottom_toBottomOf="@id/birthGuideTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/nameInputEditText"
+        app:layout_constraintTop_toTopOf="@id/birthGuideTextView" />
+
+    <ImageView
+        android:id="@+id/birthDateImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_baseline_date_range_24"
+        app:layout_constraintBottom_toBottomOf="@id/birthPickTextView"
+        app:layout_constraintStart_toEndOf="@id/birthPickTextView"
+        app:layout_constraintTop_toTopOf="@id/birthPickTextView"
+        android:contentDescription="@string/date_pick_image_description"/>
+
+    <TextView
+        android:id="@+id/bloodTypeGuideTextView"
+        style="@style/guideLine_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="@string/bloodType_guideLine_text"
+        app:layout_constraintEnd_toStartOf="@+id/maxGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/birthGuideTextView" />
+
+    <RadioGroup
+        android:id="@+id/rhBloodTypeRadioGroup"
+        app:layout_constraintStart_toStartOf="@id/nameInputEditText"
+        app:layout_constraintTop_toTopOf="@id/bloodTypeGuideTextView"
+        app:layout_constraintBottom_toBottomOf="@id/bloodTypeGuideTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rhPlusBloodType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/type_rh_plus"
+            style="@style/radioButton_style"
+            />
+
+        <RadioButton
+            android:id="@+id/rhMinusBloodType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/type_rh_minus"
+            style="@style/radioButton_style"/>
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/bloodTypeSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        app:layout_constraintBottom_toBottomOf="@id/rhBloodTypeRadioGroup"
+        app:layout_constraintEnd_toEndOf="@+id/nameInputEditText"
+        app:layout_constraintStart_toEndOf="@id/rhBloodTypeRadioGroup"
+        app:layout_constraintTop_toTopOf="@id/rhBloodTypeRadioGroup" />
+
+    <TextView
+        android:id="@+id/telGuideTextView"
+        style="@style/guideLine_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="@string/tel_guideLine_text"
+        app:layout_constraintEnd_toStartOf="@+id/maxGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bloodTypeGuideTextView" />
+
+    <EditText
+        android:id="@+id/telInputEditText"
+        app:layout_constraintStart_toStartOf="@id/nameInputEditText"
+        app:layout_constraintEnd_toEndOf="@id/nameInputEditText"
+        app:layout_constraintTop_toTopOf="@id/telGuideTextView"
+        app:layout_constraintBottom_toBottomOf="@id/telGuideTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="@string/tel_edit_text_hint"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/detailGuideTextView"
+        style="@style/guideLine_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:text="@string/detail_guideLine_text"
+        app:layout_constraintEnd_toStartOf="@+id/maxGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/telGuideTextView" />
+
+    <CheckBox
+        android:id="@+id/detailCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/nameInputEditText"
+        app:layout_constraintTop_toTopOf="@id/detailGuideTextView"
+        app:layout_constraintBottom_toBottomOf="@id/detailGuideTextView"/>
+
+    <TextView
+        android:id="@+id/detailVisibleTextView"
+        app:layout_constraintEnd_toEndOf="@id/nameInputEditText"
+        app:layout_constraintStart_toEndOf="@id/detailCheckBox"
+        app:layout_constraintTop_toTopOf="@id/detailGuideTextView"
+        app:layout_constraintBottom_toBottomOf="@id/detailGuideTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/detail_visible_text"
+        android:gravity="end"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/detailInputEditText"
+        app:layout_constraintStart_toStartOf="@id/nameInputEditText"
+        app:layout_constraintEnd_toEndOf="@id/nameInputEditText"
+        app:layout_constraintTop_toBottomOf="@id/detailGuideTextView"
+        android:layout_marginTop="24dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        tools:ignore="Autofill"
+        android:hint="@string/detail_editText_text"
+        android:gravity="center"
+        android:visibility="invisible"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

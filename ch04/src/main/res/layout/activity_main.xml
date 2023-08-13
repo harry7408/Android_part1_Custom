@@ -121,7 +121,7 @@
        app:layout_constraintTop_toBottomOf="@id/telGuideTextView" />
 
    <TextView
-       android:id="@+id/TextView"
+       android:id="@+id/detailTextView"
        style="@style/content_text_style"
        android:layout_width="0dp"
        android:layout_height="wrap_content"
@@ -134,7 +134,7 @@
        tools:text="주의사항" />
 
    <com.google.android.material.floatingactionbutton.FloatingActionButton
-       android:id="@+id/teleButton"
+       android:id="@+id/telButton"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        app:layout_constraintStart_toStartOf="@id/editButton"

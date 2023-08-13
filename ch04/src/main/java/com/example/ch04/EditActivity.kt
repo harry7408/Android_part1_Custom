@@ -1,8 +1,7 @@
 package com.example.ch04
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import com.example.ch04.databinding.ActivityEditBinding
 
 class EditActivity : AppCompatActivity() {
