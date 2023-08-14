@@ -1,0 +1,9 @@
+package com.example.ch04
+
+const val PREF_NAME="PERSON_INFO"
+const val PERSON_NAME="NAME"
+const val PERSON_BIRTH_DATE="BIRTH_DATE"
+const val PERSON_BLOOD_TYPE="BLOOD_TYPE"
+const val PERSON_PHONE_NUMBER="PHONE_NUMBER"
+const val PERSON_DETAIL="DETAIL"
+

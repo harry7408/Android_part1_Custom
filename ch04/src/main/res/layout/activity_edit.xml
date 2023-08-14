@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="60dp"
         android:gravity="end"
-        android:text="@string/initial_birth_text"
+        android:text="@string/default_birth"
         app:layout_constraintBottom_toBottomOf="@id/birthGuideTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/nameInputEditText"
@@ -114,7 +114,6 @@
         android:id="@+id/bloodTypeSpinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         app:layout_constraintBottom_toBottomOf="@id/rhBloodTypeRadioGroup"
         app:layout_constraintEnd_toEndOf="@+id/nameInputEditText"
         app:layout_constraintStart_toEndOf="@id/rhBloodTypeRadioGroup"
@@ -187,5 +186,23 @@
         android:hint="@string/detail_editText_text"
         android:gravity="center"
         android:visibility="invisible"/>
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/datePickLayer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="birthPickTextView,birthDateImageView"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/saveFloatingActionButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_save_24"
+        android:backgroundTint="@color/purple_200"
+        android:contentDescription="@string/save_description"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
