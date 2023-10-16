@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_timer_text_size">70sp</dimen>
+    <dimen name="lap_timer_text_size">48sp</dimen>
+
+    <dimen name="top_margin">16dp</dimen>
+    <dimen name="bottom_margin">16dp</dimen>
+    <dimen name="start_margin">24dp</dimen>
+    <dimen name="end_margin">24dp</dimen>
+
+    <dimen name="corner_radius">24dp</dimen>
+
+    <dimen name="button_horizontal_margin">32dp</dimen>
+
+    <dimen name="horizontal_padding">24dp</dimen>
+    <dimen name="vertical_padding">16dp</dimen>
+
+    <dimen name="button_text_size">20sp</dimen>
+    <dimen name="lap_title_text_size">20sp</dimen>
+</resources>

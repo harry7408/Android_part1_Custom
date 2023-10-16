@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="button_style">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="main_timer_style">
+        <item name="android:textSize">@dimen/lap_timer_text_size</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+</resources>

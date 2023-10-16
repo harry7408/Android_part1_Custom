@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/mainTimerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/init_time"
+        android:textSize="@dimen/main_timer_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/main_timer_style"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <TextView
+        android:id="@+id/lapTimerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin"
+        android:text="@string/init_time"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/lap_timer_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/mainTimerTextView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lapTitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lap_title_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingStart="@dimen/horizontal_padding"
+        android:paddingEnd="@dimen/horizontal_padding"
+        android:layout_marginStart="@dimen/start_margin"
+        android:layout_marginEnd="@dimen/end_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/lap_title_text_size"
+        android:layout_marginTop="@dimen/top_margin"
+        app:layout_constraintTop_toBottomOf="@id/lapTimerTextView" />
+
+    <ScrollView
+        android:id="@+id/lapTimeScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/horizontalGuideLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lapTitleTextView"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/resultLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/horizontal_padding"
+        android:paddingTop="@dimen/vertical_padding"
+        android:paddingEnd="@dimen/horizontal_padding"
+        android:paddingBottom="@dimen/vertical_padding"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/recordButton"
+        style="@style/button_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/button_horizontal_margin"
+        android:layout_marginEnd="@dimen/button_horizontal_margin"
+        android:background="@drawable/rectangle_dark_gray_r24"
+        android:text="@string/record_button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/horizontalGuideLine" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/startButton"
+        style="@style/button_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/button_horizontal_margin"
+        android:layout_marginEnd="@dimen/button_horizontal_margin"
+        android:background="@drawable/rectangle_blue_r24"
+        android:text="@string/start_button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/verticalGuideLine"
+        app:layout_constraintTop_toBottomOf="@id/lapTimeScrollView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/resetButton"
+        style="@style/button_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/button_horizontal_margin"
+        android:layout_marginEnd="@dimen/button_horizontal_margin"
+        android:background="@drawable/rectangle_dark_gray_r24"
+        android:text="@string/init_button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lapTimeScrollView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/resumeButton"
+        style="@style/button_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/button_horizontal_margin"
+        android:layout_marginEnd="@dimen/button_horizontal_margin"
+        android:background="@drawable/rectangle_blue_r24"
+        android:text="@string/resume_button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/verticalGuideLine"
+        app:layout_constraintTop_toBottomOf="@id/lapTimeScrollView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/stopButton"
+        style="@style/button_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/button_horizontal_margin"
+        android:layout_marginEnd="@dimen/button_horizontal_margin"
+        android:background="@drawable/rectangle_red_r24"
+        android:text="@string/stop_button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/verticalGuideLine"
+        app:layout_constraintTop_toBottomOf="@id/lapTimeScrollView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

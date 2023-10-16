@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">StopWatch</string>
+
+    <string name="init_time">00:00.00</string>
+
+    <string name="start_button_text">시작</string>
+    <string name="record_button_text">구간 기록</string>
+    <string name="init_button_text">초기화</string>
+    <string name="stop_button_text">중지</string>
+    <string name="resume_button_text">계속</string>
+
+    <string name="lap_title_text">\t\t\t\t구간 \t\t\t\t\t\t\t\t\t기록 \t\t\t\t\t\t\t\t\t\t 시간</string>
+</resources>
